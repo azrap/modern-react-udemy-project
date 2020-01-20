@@ -18,15 +18,6 @@ class App extends React.Component {
       }
     );
   }
-  // render() {
-  //   return (
-  //     <div>
-  //       Lattitude: {this.state.lat}
-  //       <br />
-  //       Error: {this.state.errorMessage}
-  //     </div>
-  //   );
-  // }
 
   render() {
     return (
