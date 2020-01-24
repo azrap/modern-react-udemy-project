@@ -5,7 +5,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     // this is the only time we do direct assignment to this.state. All other times will be with setState
-    this.state = { lat: null, errorMessage: " " }; //we don't know what it is right now so we put null
+    this.state = { lat: null, errorMessage: "" }; //we don't know what it is right now so we put null
 
     window.navigator.geolocation.getCurrentPosition(
       position => {
@@ -19,21 +19,33 @@ class App extends React.Component {
     );
   }
 
+  componentDidMount() {
+    console.log("My component was rendered to the screen");
+  }
+
+  componentDidUpdate() {
+    console.log("My component was just updated - it rendered!");
+  }
+
   render() {
-    // if (this.state.errorMessage && this.state.lat) {
-    //   return <div>Error: {this.state.errorMessage}</div>;
-    // }
-    // if (!this.state.errorMessage && this.state.lat) {
-    //   return <div>Lattitude: {this.state.lat}</div>;
-    // }
-    // return <div>Loading</div>;
-    return (
-      <div>
-        Lattitude: {this.state.lat}
-        <br />
-        Error: {this.state.errorMessage}
-      </div>
-    );
+    if (!this.state.errorMessage && this.state.lat) {
+      console.log("inside the lat statement");
+      return <div>Lattitude: {this.state.lat}</div>;
+    }
+
+    if (this.state.errorMessage && !this.state.lat) {
+      console.log("inside the error statement");
+      return <div>Error: {this.state.errorMessage}</div>;
+    }
+
+    return <div>Loading</div>;
+    // return (
+    //   <div>
+    //     Lattitude: {this.state.lat}
+    //     <br />
+    //     Error: {this.state.errorMessage}
+    //   </div>
+    // );
   }
 }
 
