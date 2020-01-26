@@ -1,6 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
+//prior to introducing any state we do this
+
 class App extends React.Component {
   render() {
     window.navigator.geolocation.getCurrentPosition(
