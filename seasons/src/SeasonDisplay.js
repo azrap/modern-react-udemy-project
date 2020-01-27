@@ -19,8 +19,10 @@ const SeasonDisplay = props => {
   console.log(season);
   return (
     <div>
-      Season Feelings:
-      <h1>{seasonText}</h1>
+      <h1>
+        Season Feelings:
+        {seasonText}
+      </h1>
     </div>
   );
 };
