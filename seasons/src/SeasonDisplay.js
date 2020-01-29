@@ -1,6 +1,18 @@
 import React from "react";
+import "./seasonDisplay.css";
 
 // put logic outside of the functional compoent. Can do it inside, but this is neater
+
+const seasonConfig = {
+  summer: {
+    seasonText: "Let's hit the beach!",
+    iconName: "sun"
+  },
+  winter: {
+    seasonText: " Burr it's chilly",
+    iconName: "snowflake"
+  }
+};
 
 const getSeason = (lat, month) => {
   if (month > 2 && month < 9) {
@@ -13,16 +25,13 @@ const getSeason = (lat, month) => {
 
 const SeasonDisplay = props => {
   const season = getSeason(props.lat, new Date().getMonth());
-  const seasonText =
-    season === "winter" ? " Burr it's chilly" : " Let's hit the beach!";
+  const { seasonText, iconName } = seasonConfig[season];
 
-  console.log(season);
   return (
-    <div>
-      <h1>
-        Season Feelings:
-        {seasonText}
-      </h1>
+    <div className={`season-display ${season}`}>
+      <i className={`icon-left massive ${iconName} icon`} />
+      <h1>{seasonText}</h1>
+      <i className={`icon-right massive ${iconName} icon`} />
     </div>
   );
 };

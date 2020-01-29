@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import SeasonDisplay from "./SeasonDisplay";
+import Spinner from "./Spinner";
 
 class App extends React.Component {
   // constructor's only job is to initialize our state
@@ -22,7 +23,8 @@ class App extends React.Component {
     console.log(this.state.lat);
   }
 
-  render() {
+  // pull the content out of the return statement so it's more customizeable when you have multiple return statements
+  renderContent() {
     if (!this.state.errorMessage && this.state.lat) {
       console.log("inside the lat statement");
       // <div>Lattitude: {this.state.lat}</div>;
@@ -33,15 +35,11 @@ class App extends React.Component {
       return <div>Error: {this.state.errorMessage}</div>;
     }
 
-    return <div>Loading</div>;
-    // return (
-    //   <div>
-    //     Lattitude: {this.state.lat}
-    //     <br />
-    //     Error: {this.state.errorMessage}
-    //   </div>
-    // );
+    return <Spinner message="Please Accept Location Request" />;
+  }
+
+  render() {
+    return <div>{this.renderContent()}</div>;
   }
 }
-
 ReactDOM.render(<App />, document.querySelector("#root"));
