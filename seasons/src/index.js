@@ -23,7 +23,7 @@ class App extends React.Component {
     console.log(this.state.lat);
   }
 
-  // pull the content out of the return statement so it's more customizeable when you have multiple return statements
+  // method: pull the content out of the return statement so it's more customizeable when you have multiple return statements
   renderContent() {
     if (!this.state.errorMessage && this.state.lat) {
       console.log("inside the lat statement");
