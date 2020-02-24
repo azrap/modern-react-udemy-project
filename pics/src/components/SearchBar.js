@@ -8,11 +8,12 @@ class SearchBar extends React.Component {
   // }
   state = { term: "Search Term Here!" };
 
-  // if you use arrow function, it automatically makes sure this.state automatically binds to the component (Search Bar)
+  // if you use arrow function, it automatically makes sure this.state automatically binds to the component in the function (Search Bar )
   onFormSubmit = event => {
     // keeps browser from automatically refreshing page on for submit
     event.preventDefault();
-    console.log(this.state.term);
+
+    this.props.onSubmit(this.state.term);
   };
 
   render() {
