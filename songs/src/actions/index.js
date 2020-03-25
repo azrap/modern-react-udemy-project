@@ -1,4 +1,4 @@
-//Action creator
+//Action creators
 
 export const selectSong = song => {
   //return an action
