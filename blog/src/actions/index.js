@@ -4,7 +4,7 @@ export const fetchPosts = () => {
   return function () {
     return {
       type: "FETCH_POSTS",
-      payload: "",
+      payload: " ",
     };
   };
 };
