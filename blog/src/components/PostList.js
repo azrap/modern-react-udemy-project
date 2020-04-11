@@ -4,11 +4,18 @@ import { fetchPosts } from "../actions";
 
 class PostList extends React.Component {
   componentDidMount() {
-    this.props.fetchPosts();
+    const data = this.props.fetchPosts();
+    console.log(data);
   }
+
   render() {
-    return <div>Post List</div>;
+    console.log(this.props.posts);
+    return "boogaloo";
   }
 }
 
-export default connect(null, { fetchPosts })(PostList);
+const mapStateToProps = (state) => {
+  return { posts: state.posts };
+};
+
+export default connect(mapStateToProps, { fetchPosts })(PostList);
