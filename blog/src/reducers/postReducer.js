@@ -1,5 +1,5 @@
 export default (state = [], action) => {
-  console.log("action type", action.type);
+  console.log("hi action inside reducer", action);
   switch (action.type) {
     case "FETCH_POSTS":
       return action.payload;

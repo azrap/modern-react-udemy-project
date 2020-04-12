@@ -5,9 +5,11 @@ export const fetchPosts = () => {
     console.log("hi");
     const response = await jsonPlaceholder.get("/posts");
 
+    console.log("response.data inside action creator", response.data);
+
     return {
       type: "FETCH_POSTS",
-      payload: response,
+      payload: response.data,
     };
   };
 };
