@@ -8,6 +8,7 @@ class PostList extends React.Component {
   }
 
   renderList() {
+    console.log(this.props);
     return "Post List";
     // return this.props.posts.map((post) => {
     //   return (
