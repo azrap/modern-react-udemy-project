@@ -1,8 +1,8 @@
 export default (state = [], action) => {
-  // console.log("hi action inside reducer", action.payload);
-
   switch (action.type) {
     case "FETCH_POSTS":
+      // const payload = action.payload;
+      // console.log("action.payload inside switch", payload);
       return action.payload;
     default:
       return state;
