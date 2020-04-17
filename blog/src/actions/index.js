@@ -1,4 +1,5 @@
 import jsonPlaceholder from "../api/jsonPlaceholder";
+import _ from "lodash";
 
 export const fetchPosts = () => {
   return async function (dispatch, getState) {
