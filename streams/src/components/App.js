@@ -14,7 +14,7 @@ const App = () => {
       <BrowserRouter>
         <div>
           <Route path="/" exact component={PageOne} />
-          <Route path="/pagetwo" component={PageTwo} />
+          <Route path="/pagetwo" exact component={PageTwo} />
         </div>
       </BrowserRouter>
     </div>
