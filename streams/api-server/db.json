@@ -6,9 +6,14 @@
       "id": 1
     },
     {
-      "title": "aaa",
-      "description": "bbb",
+      "title": "one more stream",
+      "description": "it's time to celebrate",
       "id": 2
+    },
+    {
+      "title": "other stream",
+      "description": "stream stream stream",
+      "id": 3
     }
   ]
 }
