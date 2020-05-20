@@ -8,8 +8,8 @@ const Modal = (props) => {
         <div className="header">Delete Stream</div>
         <div className="content">Are you sure you want to delete stream?</div>
         <div className="actions">
-          <button className="ui button">Delete</button>
-          <button className="ui primary button">Cancel</button>
+          <button className="ui primary button">Delete</button>
+          <button className="ui button">Cancel</button>
         </div>
       </div>
       {/* // you need the below + to hook it up to index.html // also need to add{" "} */}
