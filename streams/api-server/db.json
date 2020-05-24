@@ -14,6 +14,12 @@
       "title": "other stream",
       "description": "stream stream stream",
       "id": 3
+    },
+    {
+      "title": "This stream is special",
+      "description": "it's the first one with delete button!",
+      "userId": "103720899666923093614",
+      "id": 4
     }
   ]
 }
