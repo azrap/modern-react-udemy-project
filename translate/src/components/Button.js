@@ -12,7 +12,9 @@ class Button extends React.Component {
   renderButton(color) {
     return (
       <button className={`ui button ${color}`}>
+        {/* the consumer gets the context from the provider in app via the value */}
         <LanguageContext.Consumer>
+          {/* consumer always needs a function */}
           {(value) => this.renderSubmit(value)}
         </LanguageContext.Consumer>
       </button>
