@@ -6,7 +6,7 @@ class Button extends React.Component {
   //   contextType is nont foobar banana
   //doing this gives us this.context
   renderSubmit(value) {
-    return value === "english" ? "Submit" : "Voorleggen";
+    return value.language === "english" ? "Submit" : "Voorleggen";
   }
 
   renderButton(color) {
@@ -14,7 +14,7 @@ class Button extends React.Component {
       <button className={`ui button ${color}`}>
         {/* the consumer gets the context from the provider in app via the value */}
         <LanguageContext.Consumer>
-          {/* consumer always needs a function */}
+          {/* consumer always needs a value*/}
           {(value) => this.renderSubmit(value)}
         </LanguageContext.Consumer>
       </button>
