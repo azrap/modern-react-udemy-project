@@ -11,7 +11,7 @@ class Lottery extends Component {
   constructor(props) {
     super(props);
     console.log(this.props);
-    this.state = { nums: Array.from({ length: this.props.maxBalls }) };
+    this.state = { nums: Array.from({ length: this.props.maxBalls }) }; //empty array
     this.handleClick = this.handleClick.bind(this);
   }
 
