@@ -16,7 +16,6 @@ class ColorPalette extends Component {
       "violet",
       "magenta",
       "yellow",
-      "orange",
     ],
   };
   constructor(props) {
