@@ -6,7 +6,7 @@ class ColorPalette extends Component {
   static defaultProps = {
     title: "colors",
     numBoxes: 18,
-    allColors: ["purple", "green", "blue", "cyan"],
+    allColors: ["purple", "green", "blue", "cyan", "pink"],
   };
   constructor(props) {
     super(props);
